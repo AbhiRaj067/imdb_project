@@ -1,64 +1,65 @@
+# 🎭 IMDb Movie Review Sentiment Analyzer
 
-🎭 IMDb Sentiment Analysis Project
-Overview
-Hi! Welcome to my Sentiment Analysis project. I built this end-to-end Machine Learning pipeline to automatically read movie reviews and figure out if the reviewer actually liked the movie (Positive) or hated it (Negative).
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://imdbproject-bepzte4hgzqmelgvhps7kd.streamlit.app/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Accuracy](https://img.shields.io/badge/Accuracy-88%25-brightgreen?style=for-the-badge)](https://github.com/AbhiRaj067/imdb_project)
 
-I wanted to build something that goes beyond just training a model in a notebook, so I built out the complete architecture: from downloading the raw data and cleaning the text, to training multiple models, creating visualizations, and finally deploying it all as an interactive web app using Streamlit.
+**Live Demo:** [Try the App Now!](https://imdbproject-bepzte4hgzqmelgvhps7kd.streamlit.app/)
 
-The Dataset
-I used the Stanford aclImdb Dataset for this project.
+Hi! Welcome to my **IMDb Movie Review Sentiment Analysis** project. This end-to-end Machine Learning pipeline automatically reads movie reviews and predicts if the reviewer liked the movie (🟢 **Positive**) or hated it (🔴 **Negative**).
 
-It contains 50,000 movie reviews.
+I built this to demonstrate a complete NLP workflow: from downloading raw data, cleaning messy text, training models, creating visualizations, to deploying a live web app!
 
-I split it evenly: 25,000 reviews to train the models, and 25,000 brand new reviews to test how accurate they were.
+## 📊 Dataset
+- **Source:** [Stanford Large Movie Review Dataset](http://ai.stanford.edu/~amaas/data/sentiment/)
+- **Size:** 50,000 labeled reviews
+- **Train/Test Split:** 25,000 training + 25,000 testing
+- **Balance:** Perfectly balanced (50% positive, 50% negative)
 
-The data is perfectly balanced (50% positive reviews, 50% negative reviews).
+## ⚙️ Tech Stack
+```text
+Python | Pandas | NumPy | Scikit-Learn | NLTK | BeautifulSoup | Streamlit | Matplotlib | Seaborn | WordCloud
 
-How I Built It (The Pipeline)
-I organized my code into modular Python scripts inside the src/ folder to keep things clean:
+## Results
 
-data_loader.py: This script connects to the Stanford server, downloads the 50,000 text files, and converts them into clean Pandas DataFrames (train.csv and test.csv).
+| Model               | Vectorizer      | Accuracy  |
+| ------------------- | --------------- | --------- |
+| Logistic Regression | TF-IDF          | 87.94% 🥇 |
+| Naive Bayes         | CountVectorizer | 82.28% 🥈 |
 
-preprocessing.py: Raw internet text is messy. I used BeautifulSoup to strip out HTML tags and NLTK to remove stop words and lemmatize the words.
 
-train_ml.py: This is where the actual learning happens. I built Scikit-Learn pipelines and trained two different models to compare their performance: a Naive Bayes model and a Logistic Regression model.
+## How to Run Locally
+If you want to run this project on your own machine, follow these steps:
 
-eda.py: I used Matplotlib and WordCloud to visualize the most common words used in good vs. bad reviews.
-
-app.py: Finally, I built a web interface using Streamlit so anyone can type in a custom review and test the models in real-time.
-
-Results
-The Logistic Regression model performed the best!
-
-Logistic Regression (TF-IDF): 87.94% Accuracy
-
-Naive Bayes (CountVectorizer): 82.28% Accuracy
-
-Tech Stack Used
-Python, Pandas, NumPy
-
-Scikit-Learn (Machine Learning)
-
-NLTK, BeautifulSoup (Natural Language Processing)
-
-Streamlit (Web Deployment)
-
-How to Run This on Your Machine
-If you want to test my code on your own computer, here is exactly how to do it:
-
-First, clone this repository and install the required libraries:
-
-bash
+# 1. Clone the repository
 git clone https://github.com/AbhiRaj067/imdb_project.git
 cd imdb_project
-pip install -r requirements.txt
-Then, run my scripts in this exact order to process the data and train the models:
 
-bash
+# 2. Install required libraries
+pip install -r requirements.txt
+
+# 3. Download data & train the models (Run in this exact order)
 python src/data_loader.py
 python src/train_ml.py
-python src/eda.py
-Finally, launch the web app:
 
-bash
+# 4. Generate EDA visualizations (Optional)
+python src/eda.py
+
+# 5. Launch the Streamlit web app
 streamlit run src/app.py
+
+## Project Structure
+imdb_project/
+├── README.md                  # Project documentation
+├── requirements.txt           # Required Python libraries
+├── src/
+│   ├── app.py                 # Streamlit web app code
+│   ├── data_loader.py         # Connects to Stanford, downloads & parses data
+│   ├── preprocessing.py       # Cleans HTML, removes stopwords, lemmatizes text
+│   ├── train_ml.py            # Builds pipelines and trains LR & NB models
+│   └── eda.py                 # Generates word clouds and distribution plots
+├── models/                    # Stores saved .pkl models for quick loading
+└── data/                      # Stores CSVs and generated visualization images
+
+
+public URL : https://imdbproject-bepzte4hgzqmelgvhps7kd.streamlit.app/
