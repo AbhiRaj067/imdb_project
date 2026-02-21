@@ -15,16 +15,20 @@ I built this to demonstrate a complete NLP workflow: from downloading raw data, 
 - **Balance:** Perfectly balanced (50% positive, 50% negative)
 
 ## ⚙️ Tech Stack
-```text
-Python | Pandas | NumPy | Scikit-Learn | NLTK | BeautifulSoup | Streamlit | Matplotlib | Seaborn | WordCloud
-🏆 Results
-Model	Vectorizer	Accuracy
-Logistic Regression	TF-IDF	87.94% 🥇
-Naive Bayes	CountVectorizer	82.28% 🥈
-🚀 How to Run Locally
+> Python | Pandas | NumPy | Scikit-Learn | NLTK | BeautifulSoup | Streamlit | Matplotlib | Seaborn | WordCloud
+
+## 🏆 Results
+
+| Model | Vectorizer | Accuracy |
+|-------|------------|----------|
+| Logistic Regression | TF-IDF | **87.94%** 🥇 |
+| Naive Bayes | CountVectorizer | 82.28% 🥈 |
+
+## 🚀 How to Run Locally
+
 If you want to run this project on your own machine, follow these steps:
 
-bash
+```bash
 # 1. Clone the repository
 git clone https://github.com/AbhiRaj067/imdb_project.git
 cd imdb_project
@@ -41,7 +45,8 @@ python src/eda.py
 
 # 5. Launch the Streamlit web app
 streamlit run src/app.py
-📁 Project Structure
+
+##📁 Project Structure
 text
 imdb_project/
 ├── README.md                  # Project documentation
