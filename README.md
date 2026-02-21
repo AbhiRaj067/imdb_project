@@ -1,8 +1,6 @@
 # 🎭 IMDb Movie Review Sentiment Analyzer
 
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://imdbproject-bepzte4hgzqmelgvhps7kd.streamlit.app/)
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Accuracy](https://img.shields.io/badge/Accuracy-88%25-brightgreen?style=for-the-badge)](https://github.com/AbhiRaj067/imdb_project)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://imdbproject-bepzte4hgzqmelgvhps7kd.streamlit.app/)
 
 **Live Demo:** [Try the App Now!](https://imdbproject-bepzte4hgzqmelgvhps7kd.streamlit.app/)
 
@@ -19,18 +17,14 @@ I built this to demonstrate a complete NLP workflow: from downloading raw data, 
 ## ⚙️ Tech Stack
 ```text
 Python | Pandas | NumPy | Scikit-Learn | NLTK | BeautifulSoup | Streamlit | Matplotlib | Seaborn | WordCloud
-
-## Results
-
-| Model               | Vectorizer      | Accuracy  |
-| ------------------- | --------------- | --------- |
-| Logistic Regression | TF-IDF          | 87.94% 🥇 |
-| Naive Bayes         | CountVectorizer | 82.28% 🥈 |
-
-
-## How to Run Locally
+🏆 Results
+Model	Vectorizer	Accuracy
+Logistic Regression	TF-IDF	87.94% 🥇
+Naive Bayes	CountVectorizer	82.28% 🥈
+🚀 How to Run Locally
 If you want to run this project on your own machine, follow these steps:
 
+bash
 # 1. Clone the repository
 git clone https://github.com/AbhiRaj067/imdb_project.git
 cd imdb_project
@@ -47,8 +41,8 @@ python src/eda.py
 
 # 5. Launch the Streamlit web app
 streamlit run src/app.py
-
-## Project Structure
+📁 Project Structure
+text
 imdb_project/
 ├── README.md                  # Project documentation
 ├── requirements.txt           # Required Python libraries
@@ -60,6 +54,3 @@ imdb_project/
 │   └── eda.py                 # Generates word clouds and distribution plots
 ├── models/                    # Stores saved .pkl models for quick loading
 └── data/                      # Stores CSVs and generated visualization images
-
-
-public URL : https://imdbproject-bepzte4hgzqmelgvhps7kd.streamlit.app/
