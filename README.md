@@ -28,21 +28,21 @@ I built this to demonstrate a complete NLP workflow: from downloading raw data, 
 
 If you want to run this project on your own machine, follow these steps:
 
-    # 1. Clone the repository
+# 1. Clone the repository
     git clone https://github.com/AbhiRaj067/imdb_project.git
     cd imdb_project
 
-    # 2. Install required libraries
+# 2. Install required libraries
     pip install -r requirements.txt
 
-    # 3. Download data & train the models
+# 3. Download data & train the models
     python src/data_loader.py
     python src/train_ml.py
 
-    # 4. Generate EDA visualizations
+# 4. Generate EDA visualizations
     python src/eda.py
 
-    # 5. Launch the Streamlit web app
+# 5. Launch the Streamlit web app
     streamlit run src/app.py
 
 
