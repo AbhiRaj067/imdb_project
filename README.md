@@ -28,34 +28,38 @@ I built this to demonstrate a complete NLP workflow: from downloading raw data, 
 
 If you want to run this project on your own machine, follow these steps:
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/AbhiRaj067/imdb_project.git
-cd imdb_project
+    # 1. Clone the repository
+    git clone https://github.com/AbhiRaj067/imdb_project.git
+    cd imdb_project
 
-# 2. Install required libraries
-pip install -r requirements.txt
+    # 2. Install required libraries
+    pip install -r requirements.txt
 
-# 3. Download data & train the models (Run in this exact order)
-python src/data_loader.py
-python src/train_ml.py
+    # 3. Download data & train the models
+    python src/data_loader.py
+    python src/train_ml.py
 
-# 4. Generate EDA visualizations (Optional)
-python src/eda.py
+    # 4. Generate EDA visualizations
+    python src/eda.py
 
-# 5. Launch the Streamlit web app
-streamlit run src/app.py
+    # 5. Launch the Streamlit web app
+    streamlit run src/app.py
 
-##📁 Project Structure
-text
-imdb_project/
-├── README.md                  # Project documentation
-├── requirements.txt           # Required Python libraries
-├── src/
-│   ├── app.py                 # Streamlit web app code
-│   ├── data_loader.py         # Connects to Stanford, downloads & parses data
-│   ├── preprocessing.py       # Cleans HTML, removes stopwords, lemmatizes text
-│   ├── train_ml.py            # Builds pipelines and trains LR & NB models
-│   └── eda.py                 # Generates word clouds and distribution plots
-├── models/                    # Stores saved .pkl models for quick loading
-└── data/                      # Stores CSVs and generated visualization images
+
+## 📁 Project Structure
+
+    imdb_project/
+    ├── README.md                  # Project documentation
+    ├── requirements.txt           # Required Python libraries
+    ├── src/
+    │   ├── app.py                 # Streamlit web app code
+    │   ├── data_loader.py         # Connects to Stanford, downloads & parses data
+    │   ├── preprocessing.py       # Cleans HTML, removes stopwords, lemmatizes text
+    │   ├── train_ml.py            # Builds pipelines and trains LR & NB models
+    │   └── eda.py                 # Generates word clouds and distribution plots
+    ├── models/                    # Stores saved .pkl models for quick loading
+    └── data/                      # Stores CSVs and generated visualization images
+
+
+---
+**Public URL:** [https://imdbproject-bepzte4hgzqmelgvhps7kd.streamlit.app/](https://imdbproject-bepzte4hgzqmelgvhps7kd.streamlit.app/)
